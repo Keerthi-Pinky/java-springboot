@@ -33,7 +33,7 @@ pipeline{
             }
         }
         stage{'Deploy to prod'}{
-            steps{
+            stteps{
                 echo 'Deploy to prod'
             }
         }
