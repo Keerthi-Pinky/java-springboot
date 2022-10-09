@@ -1,7 +1,7 @@
-pipeline{
+pipeline {
     agent any
 
-    stages{
+    stages {
         stage{'Build'}{
             steps{
                 echo 'Build'
@@ -38,8 +38,8 @@ pipeline{
             }
         }
     }
-    post{
-        always{
+    post {
+        always {
             echo 'I would always say hello again'
         }
     }
