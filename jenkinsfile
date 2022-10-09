@@ -2,37 +2,37 @@ pipeline{
     agent any
 
     stages{
-        stage{'Build'}{
+        stage('Build'){
             steps{
                 echo 'Build'
             }
 
         }
 
-        stage{'Test'}{
+        stage('Test'){
             steps{
                 echo 'Test'
             }
 
         }
-        stage{'Sonarqube'}{
+        stage('Sonarqube'){
             steps{
                 echo 'Sonarqube'
             }
 
         }
-        stage{'Push to artifactory'}{
+        stage('Push to artifactory'){
             steps{
                 echo 'Push to artifactory'
             }
 
         }
-        stage {'Deploy to QA'}{
+        stage ('Deploy to QA'){
             steps{
                 echo 'Deploy to QA'
             }
         }
-        stage{'Deploy to prod'}{
+        stage('Deploy to prod'){
             steps{
                 echo 'Deploy to prod'
             }
