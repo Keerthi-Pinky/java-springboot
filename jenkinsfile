@@ -2,44 +2,46 @@ pipeline {
     agent any
 
     stages {
-        stage{'Build'}{
-            steps{
+        stage('Build') {
+            steps {
                 echo 'Build'
             }
 
         }
 
-        stage{'Test'}{
-            steps{
+        stage('Test') {
+            steps {
                 echo 'Test'
             }
 
         }
-        stage{'Sonarqube'}{
-            steps{
+        stage('Sonarqube') {
+            steps {
                 echo 'Sonarqube'
             }
 
         }
-        stage{'Push to a artifactory'}{
-            steps{
+        stage('Push to a artifactory') {
+            steps {
                 echo 'Push to artifactory'
             }
 
         }
-        stage {'Deploy to QA'}{
-            steps{
+        stage ('Deploy to QA') {
+            steps {
                 echo 'Deploy to QA'
             }
         }
-        stage{'Deploy to prod'}{
-            stteps{
+        stage('Deploy to prod') {
+            steps{ 
                 echo 'Deploy to prod'
             }
         }
     }
-    post {
-        always {
+    post 
+    {
+        always 
+        {
             echo 'I would always say hello again'
         }
     }
